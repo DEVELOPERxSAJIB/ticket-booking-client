@@ -1,0 +1,59 @@
+.add-theatre-form {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.add-theatre-form td {
+    padding: 20px 0;
+}
+
+.green-button {
+    background-color: #13aa52;
+    color: white;
+    border: none;
+  }
+  
+.green-button:hover {
+    background-color: #007b33; 
+    color: #fff !important;
+}
+
+.shows-table th,
+.shows-table tr {
+  font-size: 16px;
+  color: #333 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.shows-table h5 {
+  color: #31064A;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shows-table h4 {
+  color: #4096FF;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shows-table td {
+  font-size: 16px;
+  font-weight: 500;
+  color: #31064A !important;
+}
+
+.shows-table .no-data-tr td {
+  text-align: center;
+}
+
+.shows-table .no-data-tr td {
+  padding: 100px 0;
+}
+
+.show-list td {
+  font-size: 16px;
+  text-transform: capitalize;
+}

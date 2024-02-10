@@ -1,0 +1,48 @@
+.ant-modal-footer {
+  display: none;
+}
+
+textarea {
+  min-height: 80px !important;
+}
+
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-col {
+  width: 190px;
+}
+
+.table tr td img {
+  height: 50px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.show-modal {
+  padding-top: 20px;
+  height: 380px;
+}
+
+.show-modal .img-area {
+  height: 350px !important;
+  width: 250px !important;
+  float: left;
+}
+
+.show-modal .img-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.show-modal .details {
+  overflow: hidden;
+}
+.show-modal .details p {
+  margin-left: 1rem;
+  align-items: center;
+}
+.show-modal .details strong {
+  margin-left: 1rem;
+  align-items: center;
+}

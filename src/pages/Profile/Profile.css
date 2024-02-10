@@ -1,0 +1,12 @@
+.dashboard-wrapper {
+    background: #F2F4F8;
+    padding: 20px 0;
+}
+
+.dashboard-wrapper .dashboard-container {
+    border-radius: 10px;
+    width:  1360px;
+    margin: 0px auto;
+    padding: 30px;
+    background-color: #ffffff;
+}

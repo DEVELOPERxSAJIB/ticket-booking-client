@@ -1,0 +1,38 @@
+.nav-menu {
+  background-color: #31064a;
+  .container {
+    max-width: 1360px;
+    ul {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      li {
+        float: left;
+        margin-right: 3px;
+        padding: 15px 0;
+        .disabled-link {
+          // color: gray;
+          text-decoration: none;
+          cursor: no-drop;
+        }
+        a.active {
+          background-color: #5f1a89;
+        }
+        a {
+          font-size: 13px;
+          font-weight: 400;
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 5px 12px;
+          border-radius: 3px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: #5f1a89;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

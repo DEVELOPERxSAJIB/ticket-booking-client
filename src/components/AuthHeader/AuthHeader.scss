@@ -1,0 +1,36 @@
+.main-header-auth {
+    background-color: #182028;
+    padding: 7px 0;
+  
+    .container {
+      max-width: 1080px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo-area {
+        width: 125px;
+        height: 45px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .button-area {
+        button {
+          .icon {
+            margin-right: 4px;
+          }
+          background-color: #5f1a89;
+          border: none;
+          color: #fff;
+          font-size: 12px;
+          line-height: 24px;
+          font-family: poppins;
+          font-weight: 400;
+          padding: 6px 25px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }

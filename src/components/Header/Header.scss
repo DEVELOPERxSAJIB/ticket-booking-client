@@ -1,0 +1,48 @@
+.main-header {
+    background-color: #210035;
+    padding: 7px 0;
+  
+    .container {
+      max-width: 1360px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo-area {
+        width: 125px;
+        height: 45px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .search-area {
+        input {
+          background-color: transparent;
+          width: 25rem;
+          border: 0.1rem solid #fff;
+          border-radius: 5px;
+          padding: 1px 15px;
+          font-size: 12px;
+          color: #fff;
+          font-family: poppins;
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          padding: 5px 25px;
+          border-radius: 5px;
+          color: #fff;
+          border: none;
+          background-color: #5F1A89;
+          transition: .3s;
+          &:hover {
+            transition: .3s;
+            background-color: #fff;
+            color: #5F1A89;
+          }
+        }
+      }
+    }
+  }
