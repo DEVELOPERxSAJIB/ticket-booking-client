@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 // get all theatre
 export const getAllTheatre = createAsyncThunk(
   "theatre/getAllTheatre",
   async () => {
     try {
-      const response = await axios.get(`http://localhost:3030/api/v1/theatre`, {
+      const response = await axios.get(`${baseUrl}/theatre`, {
         withCredentials: true,
       });
 
@@ -23,7 +24,7 @@ export const getTheatreByOwner = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/theatre/get-theatre-by-owner`,
+        `${baseUrl}/theatre/get-theatre-by-owner`,
         data,
         {
           withCredentials: true,
@@ -43,7 +44,7 @@ export const createTheatre = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/theatre/create-theatre`,
+        `${baseUrl}/theatre/create-theatre`,
         data,
         {
           withCredentials: true,
@@ -63,7 +64,7 @@ export const deleteTheatre = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3030/api/v1/theatre/delete-theatre/${id}`,
+        `${baseUrl}/theatre/delete-theatre/${id}`,
         {
           withCredentials: true,
         }
@@ -82,7 +83,7 @@ export const updateTheatreStatus = createAsyncThunk(
   async ({ isActive, id }) => {
     try {
       const response = await axios.put(
-        `http://localhost:3030/api/v1/theatre/change-theatre-status/${id}`,
+        `${baseUrl}/theatre/change-theatre-status/${id}`,
         { isActive },
         {
           withCredentials: true,
@@ -102,7 +103,7 @@ export const findUniqueTheatre = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/theatre/find-unique-theatre`,
+        `${baseUrl}/theatre/find-unique-theatre`,
         { date : data.date, movie : data.movie },
         {
           withCredentials: true,

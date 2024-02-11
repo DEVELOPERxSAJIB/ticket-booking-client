@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 // make payment
 export const makePayment = createAsyncThunk(
@@ -7,7 +8,7 @@ export const makePayment = createAsyncThunk(
   async ({ amount, token }) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/booking/make-payment`,
+        `${baseUrl}/booking/make-payment`,
         { amount, token },
         {
           withCredentials: true,
@@ -27,7 +28,7 @@ export const bookSeats = createAsyncThunk(
   async (payload) => {
     try {
       const response = await axios
-        .post(`http://localhost:3030/api/v1/booking/book-show`, payload, {
+        .post(`${baseUrl}/booking/book-show`, payload, {
           withCredentials: true,
         })
         

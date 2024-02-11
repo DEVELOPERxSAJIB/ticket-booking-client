@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 // get all moives
 export const getAllmovies = createAsyncThunk("movie/getAllmovies", async () => {
   try {
     const response = await axios.get(
-      `http://localhost:3030/api/v1/movie/all-movies`,
+      `${baseUrl}/movie/all-movies`,
       {
         withCredentials: true,
       }
@@ -23,7 +24,7 @@ export const createMovie = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/movie/create-movie`,
+        `${baseUrl}/movie/create-movie`,
         data,
         {
           withCredentials: true,
@@ -43,7 +44,7 @@ export const updateMovie = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.put(
-        `http://localhost:3030/api/v1/movie/update-movie/${data._id}`,
+        `${baseUrl}/movie/update-movie/${data._id}`,
         data,
         {
           withCredentials: true,
@@ -61,7 +62,7 @@ export const updateMovie = createAsyncThunk(
 export const deleteMovie = createAsyncThunk("movie/deleteMovie", async (id) => {
   try {
     const response = await axios.delete(
-      `http://localhost:3030/api/v1/movie/delete/${id}`,
+      `${baseUrl}/movie/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -79,7 +80,7 @@ export const getSingleMovies = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:3030/api/v1/movie/single-movie/${id}`,
+        `${baseUrl}/movie/single-movie/${id}`,
         {
           withCredentials: true,
         }

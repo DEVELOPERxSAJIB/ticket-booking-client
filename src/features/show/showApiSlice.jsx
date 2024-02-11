@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 // create a theatre
 export const createShow = createAsyncThunk("show/createShow", async (data) => {
   try {
     const response = await axios.post(
-      `http://localhost:3030/api/v1/show/create-show`,
+      `${baseUrl}/show/create-show`,
       data,
       {
         withCredentials: true,
@@ -24,7 +25,7 @@ export const getShowsByTheatre = createAsyncThunk(
   async (theatreId) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/show/`,
+        `${baseUrl}/show/`,
         theatreId,
         { withCredentials: true }
       );
@@ -42,7 +43,7 @@ export const getAllShow = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3030/api/v1/show/`,
+        `${baseUrl}/show/`,
         { withCredentials: true }
       );
 
@@ -58,7 +59,7 @@ export const getAllShow = createAsyncThunk(
 export const deleteShow = createAsyncThunk("show/deleteShow", async (id) => {
   try {
     
-    const response = await axios.delete(`http://localhost:3030/api/v1/show/delete-show/${id}`, {
+    const response = await axios.delete(`${baseUrl}/show/delete-show/${id}`, {
       withCredentials : true
     })
 

@@ -18,6 +18,7 @@ import MessageAlert from "../../../utils/MessageAlertAntD";
 import { setMessageEmpty } from "../../../features/theatre/theatreSlice";
 import moment from "moment";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 function Movies() {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ function Movies() {
     // console.log(value)
     // axios
     //   .patch(
-    //     `http://localhost:3030/api/v1/movie/update-movie/${value.id}`,
+    //     `${baseUrl}/movie/update-movie/${value.id}`,
     //     value
     //   )
     //   .then((res) => {

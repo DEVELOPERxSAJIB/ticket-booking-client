@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 
 // registration user
 export const userRegistration = createAsyncThunk(
@@ -7,7 +8,7 @@ export const userRegistration = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:3030/api/v1/user/register`,
+        `${baseUrl}/user/register`,
         data,
         {
           withCredentials: true,
@@ -25,7 +26,7 @@ export const userRegistration = createAsyncThunk(
 export const loginUser = createAsyncThunk("auth/loginUser", async (data) => {
   try {
     const response = await axios.post(
-      `http://localhost:3030/api/v1/user/login`,
+      `${baseUrl}/user/login`,
       data,
       {
         withCredentials: true,
@@ -42,7 +43,7 @@ export const loginUser = createAsyncThunk("auth/loginUser", async (data) => {
 export const userLogOut = createAsyncThunk("user/logOut", async () => {
   try {
     const response = await axios.post(
-      `http://localhost:3030/api/v1/user/logout`,
+      `${baseUrl}/user/logout`,
       "",
       {
         withCredentials: true,
@@ -60,7 +61,7 @@ export const getLoggedInUserData = createAsyncThunk(
   "user/getLoggedInUserData",
   async () => {
     try {
-      const response = await axios.get(`http://localhost:3030/api/v1/user/me`, {
+      const response = await axios.get(`${baseUrl}/user/me`, {
         withCredentials: true,
       });
       return response.data;

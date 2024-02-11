@@ -7,6 +7,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import MainLoader from "../../../utils/MainLoader";
 import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
 import { Card, Col, Row } from "antd";
 import moment from "moment";
 import "./Booking.scss";
@@ -20,7 +21,7 @@ const Booking = () => {
 
   const fetchBookedData = async () => {
     const res = await axios.get(
-      `http://localhost:3030/api/v1/booking/user-booked-shows`,
+      `${baseUrl}/booking/user-booked-shows`,
       {
         withCredentials: true,
       }
