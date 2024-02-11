@@ -7,7 +7,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import MainLoader from "../../../utils/MainLoader";
 import axios from "axios";
-import { baseUrl } from "../../utils/baseUrl";
+import { baseUrl } from "../../../utils/baseUrl";
 import { Card, Col, Row } from "antd";
 import moment from "moment";
 import "./Booking.scss";

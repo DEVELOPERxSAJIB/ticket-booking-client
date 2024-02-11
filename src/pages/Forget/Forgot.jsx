@@ -17,7 +17,7 @@ function Forget() {
                 <label htmlFor="">Email</label>
                 <input type="text" className="form-control" />
               </div>
-              <button>SEND RESET LINK</button>
+              <button disabled>SEND RESET LINK</button>
             </form>
           </div>
         </div>
