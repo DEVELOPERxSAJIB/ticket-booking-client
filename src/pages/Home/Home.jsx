@@ -119,12 +119,9 @@ function Home() {
                 <div className="menu-movie">
                   <ul>
                     <li>
-                      <a className="active" href="">
+                      <a className="active">
                         Now Showing
                       </a>
-                    </li>
-                    <li>
-                      <a href="">Show Time</a>
                     </li>
                   </ul>
                 </div>

@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div
       style={{
-        height: "450px",
+        height: "auto",
         overflow: "hidden",
       }}
       id="carouselExampleDark"

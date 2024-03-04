@@ -1,0 +1,45 @@
+.body-scroll-disabled {
+    overflow: hidden;
+  }
+.menu-mob {
+  display: none;
+
+  button {
+    border: 0;
+    background-color: transparent;
+    font-size: 25px;
+    color: #fff;
+  }
+}
+
+.mobile-links {
+  display: block;
+  position: absolute;
+  top: 115px;
+  right: 0;
+  height: calc(100vh - 115px);
+  width: 50%;
+  background-color: #210035;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 999;
+
+  ul {
+    li {     
+        min-width: 500px;
+        font-weight: 500;
+        text-align: center;      
+    }
+  }
+}
+
+
+@media (max-width: 995px) {
+  .menu-mob {
+    display: block;
+    margin: 10px 0;
+  }
+}

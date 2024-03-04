@@ -36,3 +36,9 @@
     }
   }
 }
+
+@media (max-width : 995px) {
+  .nav-menu .container .menu-item {
+    display: none;
+  }
+}

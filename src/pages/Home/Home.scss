@@ -48,14 +48,15 @@ body {
   padding: 20px 0;
   .social-links {
     a {
+      width: 10%;
       text-decoration: none;
+      text-align: center;
     }
     .social-item {
       height: 32px;
       border-radius: 5px;
       font-size: 13px;
       font-weight: 400;
-      max-width: 150px;
       padding: 10px;
       border: 2px solid #fff;
       display: inline;
@@ -128,8 +129,12 @@ body {
 
 .movie-category-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
   .movie-item {
+    margin-top: 20px;
     position: relative;
     .main-item {
       height: 315px;
@@ -250,5 +255,57 @@ body {
 .custom-modal {
   .ant-modal-header {
     padding: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .social-wrapper {
+    .social-links {
+      a {
+        width: 15%;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .social-wrapper {
+    .social-links {
+      a {
+        width: 20%;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .social-wrapper {
+    padding: 20px 30px !important;
+    .social-links {
+      a {
+        width: 30%;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 594px) {
+  .social-wrapper {
+    padding: 20px 30px !important;
+    .social-links {
+      display: block !important;
+      margin-top: 10px !important;
+      a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
   }
 }

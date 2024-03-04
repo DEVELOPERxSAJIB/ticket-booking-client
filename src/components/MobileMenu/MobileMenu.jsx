@@ -1,12 +1,12 @@
-import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./MobileMenu.scss";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogOut } from "../../features/user/userApiSlice";
-import { Avatar } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import { HiOutlineBars3 } from "react-icons/hi2";
+import { RxCross1 } from "react-icons/rx";
 
-const Navbar = () => {
+const MobileMenu = () => {
   const dispatch = useDispatch();
 
   const { user } = useSelector((state) => state.auth);
@@ -15,18 +15,36 @@ const Navbar = () => {
     dispatch(userLogOut());
   };
 
+  const { pathname } = useLocation();
+
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="nav-menu">
-      <div className="container d-flex justify-content-between align-items-center">
-        <div className="menu-item">
+    <>
+      <div className="menu-mob">
+        {open ? (
+          <button onClick={() => setOpen((prev) => !prev)}>
+            <RxCross1 />
+          </button>
+        ) : (
+          <button onClick={() => setOpen((prev) => !prev)}>
+            <HiOutlineBars3 />
+          </button>
+        )}
+      </div>
+
+      {open && (
+        <div className="mobile-links">
           <ul>
             <li>
-              <Link className="active" to={"/"}>
+              <Link className={pathname === "/" ? "active" : ""} to={"/"}>
                 Home
               </Link>
             </li>
             <li>
-              <Link className="disabled-link" to={"/"}>ShowTimes</Link>
+              <Link className="disabled-link" to={"/"}>
+                ShowTimes
+              </Link>
             </li>
             <li>
               <Link className="disabled-link" to={"/"}>
@@ -50,7 +68,12 @@ const Navbar = () => {
             </li>
             {user.isAdmin && (
               <li>
-                <Link to={"/dashboard"}>Admin</Link>
+                <Link
+                  className={pathname === "/dashboard" ? "active" : ""}
+                  to={"/dashboard"}
+                >
+                  Admin
+                </Link>
               </li>
             )}
 
@@ -61,20 +84,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        <Link to={user.isAdmin ? "/dashboard" : "/profile"}>
-          <div className="user-profile">
-            <Avatar
-              style={{ backgroundColor: "#5F1A89", cursor: "pointer" }}
-              icon={<UserOutlined />}
-            />
-          </div>
-        </Link>
-
-        <MobileMenu />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
-export default Navbar;
+export default MobileMenu;

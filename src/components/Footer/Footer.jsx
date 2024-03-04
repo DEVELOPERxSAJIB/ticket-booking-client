@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="container">
         <div className="left-area">
           <p className="text-end">
-            Copyright© 2023 <Link to="/forget"> Show Motion Limited</Link> . All
+            Copyright© 2023 <Link to="/forgot"> Show Motion Limited</Link> . All
             Rights Reserved.
           </p>
         </div>
         <div className="right-area">
           <p className="text-end">
-            Design & Developed by <Link to="/forget">SSL Wireless</Link>
+            Design & Developed by <Link to="/forgot">SSL Wireless</Link>
           </p>
         </div>
       </div>
